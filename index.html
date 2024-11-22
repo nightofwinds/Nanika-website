@@ -39,7 +39,7 @@
         height: 100vh;
         font-size: 5rem;
         font-weight: bold;
-        color: rgb(0, 0, 0);
+        color: white;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
       }
     </style>
@@ -49,11 +49,15 @@
     />
   </head>
   <body>
-    <!-- Background video -->
+    <!-- Background video with URL source -->
     <video autoplay muted loop class="video-background">
       <source
-        src="https://github.com/nightofwinds/Nanika-website/tree/main/Assets/videos/backgroundvideo.webm"
+        src="https://cdn.discordapp.com/attachments/1250557248783126719/1309378660377170000/backgroundvideo.webm?ex=67415d67&is=67400be7&hm=56d27a3644eb5e54da7e919bdecff18879840eb8f4cb8d7ce7edb65ceb0566a5&"
         type="video/webm"
+      />
+      <source
+        src="https://example.com/path/to/your/video.mp4"
+        type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
