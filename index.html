@@ -3,66 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nanika</title>
-    <style>
-      /* Reset some default styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <title>Hi</title>
 
-      /* Full-screen layout for the background video */
-      body,
-      html {
-        height: 100%;
-        font-family: "Outfit", sans-serif;
-        overflow: hidden;
-      }
-
-      /* Background video styling */
-      .video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-      }
-
-      /* Centered text */
-      .centered-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-size: 5rem;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="/styles/buttons.css" />
+    <link rel="stylesheet" href="/styles/profile.css" />
+    <link rel="stylesheet" href="/styles/background.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/socials.css" />
   </head>
   <body>
-    <!-- Background video with URL source -->
+    <!-- video background -->
     <video autoplay muted loop class="video-background">
       <source
-        src="https://cdn.discordapp.com/attachments/1250557248783126719/1309378660377170000/backgroundvideo.webm?ex=67415d67&is=67400be7&hm=56d27a3644eb5e54da7e919bdecff18879840eb8f4cb8d7ce7edb65ceb0566a5&"
+        src="https://cdn.discordapp.com/attachments/1164556254488825896/1309658764403671060/0001-0362.webm?ex=67426245&is=674110c5&hm=8e5966eff5cfa219649a7795961917cd2996787208f5fbbfca208d574124368d&"
         type="video/webm"
       />
       <source
-        src="https://example.com/path/to/your/video.mp4"
+        src="https://cdn.discordapp.com/attachments/1164556254488825896/1309387823010549810/0001-0362.webm?ex=674165f0&is=67401470&hm=e43975671312a0ce791ed0ac6c8837c643d20e99e5c8ecf68b916baedf1132d8&"
         type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
-
-    <!-- Centered text -->
-    <div class="centered-text">Nanika</div>
+    <!-- profile -->
+    <div>
+      <div class="profile-name-container">
+        <p class="profile-name">Nanika</p>
+      </div>
+      <div class="profile-picture-container">
+        <img
+          class="profile-picture"
+          alt="Circular Image"
+          src="Assets/images/Profile/Nanika_emote_3.png"
+        />
+      </div>
+      <div class="about-me-container">
+        <p class="about-me">She / Her</p>
+        <p class="about-me">3d Artist</p>
+      </div>
+    </div>
+    <!-- socials -->
+    <div class="social-button-container">
+      <div>
+        <div>
+            <div  class="social-button-container-2">
+                <a href="https://discord.com/users/173195656314224640" target="_blank" class="social-button">
+                    <div class="social-button-graphic">
+                        discord
+                    </div>
+                </a>
+            </div>
+            <div  class="social-button-container-2">
+                <a href="https://www.google.com" target="_blank" class="social-button">
+                    <div class="social-button-graphic">
+                        placeholder
+                    </div>
+                </a>
+            </div>
+                </button>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
   </body>
 </html>

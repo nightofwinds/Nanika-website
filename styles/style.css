@@ -1,0 +1,14 @@
+body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(49, 49, 49);
+}
+p {
+  font-family: Roboto, Arial;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+a {
+  font-family: Roboto, Arial;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
