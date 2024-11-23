@@ -1,3 +1,9 @@
+body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(49, 49, 49);
+}
 .video-background {
   pointer-events: none;
   position: fixed; /* Fixes the video in place as a background */

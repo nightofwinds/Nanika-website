@@ -1,13 +1,11 @@
 .profile-name-container {
-  margin-top: 0;
-  margin-bottom: 11px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .profile-name {
-  font-size: 50px;
+  font-size: 100px;
   color: #ffffff;
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0px;
 }
 
 .profile-picture-container {
@@ -27,12 +25,8 @@
 }
 
 .about-me-container {
-  margin-top: 11px;
-  margin-bottom: 0;
 }
 .about-me {
-  margin-top: 0;
-  margin-bottom: 0;
   width: 100%;
   color: white;
 }
