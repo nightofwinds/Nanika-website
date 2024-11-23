@@ -12,7 +12,7 @@
 .layout-container {
   width: min(1000px, 100%);
   margin: 0 auto;
-  /* margin-bottom: 50px; */
+  margin-bottom: 50px;
   columns: 3 300px;
   column-gap: 1em;
 }

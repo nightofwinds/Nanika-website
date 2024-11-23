@@ -35,3 +35,7 @@
   color: white;
   align-content: center;
 }
+
+.social-button-graphic:hover {
+  background-color: #2b2b2b;
+}
