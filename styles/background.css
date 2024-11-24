@@ -2,7 +2,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(49, 49, 49);
+  background-color: #313131;
 }
 .video-background {
   pointer-events: none;
