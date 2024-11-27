@@ -1,8 +1,9 @@
 .profile-name-container {
-  pointer-events: none;
+  /* pointer-events: none; */
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .profile-name {
   font-size: 100px;
   color: #ffffff;
@@ -11,23 +12,26 @@
 
 .profile-picture-container {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: rgb(137, 137, 137);
   width: 200px;
   height: 200px;
-  border-radius: 100px;
-  outline: 6px solid #505050;
-  outline-offset: -5px;
+  border-radius: 50%;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: inline-block;
+  border-style: solid;
+  border-color: #505050;
+  border-width: 5px;
 }
+
 .profile-picture {
-  width: 100%;
+  border-radius: 50%;
 }
 
 .about-me-container {
   pointer-events: none;
 }
+
 .about-me {
   width: 100%;
   color: white;
