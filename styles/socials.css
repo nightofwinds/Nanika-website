@@ -28,6 +28,10 @@
   cursor: pointer;
 }
 .social-button-graphic {
+  justify-content: center;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto auto auto;
   width: 100%;
   height: 100%;
   background-color: #1b1b1b;
@@ -35,9 +39,15 @@
   border: 4px solid #505050;
 
   color: white;
-  align-content: center;
 }
 
 .social-button-graphic:hover {
   background-color: #2b2b2b;
+}
+.social-button-icon {
+  /* justify-content: center; */
+  margin: auto;
+}
+.social-button-text {
+  margin: auto;
 }
