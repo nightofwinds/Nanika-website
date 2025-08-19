@@ -192,8 +192,11 @@
         <div class="layout-container" id="projects"></div>
         <!-- Script -->
         <script>
-          fetch("./projects.json")
-            .then((res) => res.json())
+          fetch("Assets/data/projects.json")
+            .then((response) => {
+              if (!response.ok) throw new Error("Could not load projects.json");
+              return response.json();
+            })
             .then((projects) => {
               const container = document.getElementById("projects");
 
@@ -211,7 +214,7 @@
                 container.appendChild(group);
               });
             })
-            .catch((err) => console.error("Error loading projects.json:", err));
+            .catch((err) => console.error(err));
         </script>
       </div>
     </div>
