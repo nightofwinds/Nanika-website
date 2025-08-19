@@ -11,7 +11,6 @@
     />
 
     <!-- HTML Meta Tags -->
-    <title>Nanika's Website</title>
     <meta name="description" content="Goodmorning!" />
 
     <!-- Facebook Meta Tags -->
@@ -21,7 +20,7 @@
     <meta property="og:description" content="Goodmorning!" />
     <meta
       property="og:image"
-      content="https://cdn.discordapp.com/attachments/1154577874007887882/1310024102572195942/image.png?ex=6743b685&is=67426505&hm=853cfc4abd6fd53242bcc83702f317105e036801634bbdf63de6742898ac5045&"
+      content="https://cdn.discordapp.com/attachments/1154577874007887882/1310024102572195942/image.webp?ex=6743b685&is=67426505&hm=853cfc4abd6fd53242bcc83702f317105e036801634bbdf63de6742898ac5045&"
     />
 
     <!-- Twitter Meta Tags -->
@@ -32,7 +31,7 @@
     <meta name="twitter:description" content="Goodmorning!" />
     <meta
       name="twitter:image"
-      content="https://cdn.discordapp.com/attachments/1154577874007887882/1310024102572195942/image.png?ex=6743b685&is=67426505&hm=853cfc4abd6fd53242bcc83702f317105e036801634bbdf63de6742898ac5045&"
+      content="https://cdn.discordapp.com/attachments/1154577874007887882/1310024102572195942/image.webp?ex=6743b685&is=67426505&hm=853cfc4abd6fd53242bcc83702f317105e036801634bbdf63de6742898ac5045&"
     />
 
     <!-- google fonts -->
@@ -50,7 +49,7 @@
     <!-- video background -->
     <video autoplay muted loop class="video-background">
       <source
-        src="./Assets/videos/background/background-video.mp4"
+        src="./Assets/videos/background/background-video.webm"
         type="video/webm"
       />
       <source
@@ -183,135 +182,37 @@
     </div>
     <!-- section2 -->
     <div class="section-style" id="section2">
-      <!-- projects -->
+      <!-- Gallery -->
       <div>
-        <!-- Project title -->
-        <div class="project-title-container">
-          <h2 class="project-title">Projects</h2>
+        <!-- Gallery title -->
+        <div class="Gallery-title-container">
+          <h2 class="Gallery-title">3D Work</h2>
         </div>
-        <!-- project Layout -->
-        <div class="layout-container">
-          <!-- 256-Nanika -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\Nanika.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\Nanika_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- Gecko -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\gecko.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\gecko_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- Lightbulb -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\Lightbulb.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\Lightbulb_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- Cup -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\cup.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\cup_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- RubixCube -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\RubixCube.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\RubixCube_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- BaseballBat -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\Baseballbat.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\Baseballbat_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- MMZ-Chain-Whip -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\MMZ_Chain_Whip.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\MMZ_Chain_Whip_wireframe.png"
-              alt=""
-            />
-          </div>
-          <!-- donut-tut -->
-          <div class="img-group">
-            <img
-              class="layout-img"
-              width="300px"
-              src=".\Assets\images\projects\Donut_tut.png"
-              alt=""
-            />
-            <img
-              class="img-overlay"
-              width="300px"
-              src=".\Assets\images\projects\Donut_tut_wireframe.png"
-              alt=""
-            />
-          </div>
-        </div>
+        <!-- Gallery Layout -->
+        <div class="layout-container" id="projects"></div>
+        <!-- Script -->
+        <script>
+          fetch("./projects.json")
+            .then((res) => res.json())
+            .then((projects) => {
+              const container = document.getElementById("projects");
+
+              projects.forEach((proj) => {
+                const group = document.createElement("div");
+                group.classList.add("img-group");
+
+                group.innerHTML = `
+              <img class="layout-img" width="300" loading="lazy"
+                   src="${proj.image}" alt="3D render of ${proj.name}" />
+              <img class="img-overlay" width="300" loading="lazy"
+                   src="${proj.wireframe}" alt="Wireframe of ${proj.name}" />
+            `;
+
+                container.appendChild(group);
+              });
+            })
+            .catch((err) => console.error("Error loading projects.json:", err));
+        </script>
       </div>
     </div>
   </body>
